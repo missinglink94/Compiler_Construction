@@ -176,13 +176,63 @@ CMakeFiles/compiler_construction.dir/init.c.obj.provides: CMakeFiles/compiler_co
 CMakeFiles/compiler_construction.dir/init.c.obj.provides.build: CMakeFiles/compiler_construction.dir/init.c.obj
 
 
+CMakeFiles/compiler_construction.dir/javaclass.c.obj: CMakeFiles/compiler_construction.dir/flags.make
+CMakeFiles/compiler_construction.dir/javaclass.c.obj: ../javaclass.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\compiler_construction\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/compiler_construction.dir/javaclass.c.obj"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\compiler_construction.dir\javaclass.c.obj   -c D:\compiler_construction\javaclass.c
+
+CMakeFiles/compiler_construction.dir/javaclass.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/compiler_construction.dir/javaclass.c.i"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\compiler_construction\javaclass.c > CMakeFiles\compiler_construction.dir\javaclass.c.i
+
+CMakeFiles/compiler_construction.dir/javaclass.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/compiler_construction.dir/javaclass.c.s"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\compiler_construction\javaclass.c -o CMakeFiles\compiler_construction.dir\javaclass.c.s
+
+CMakeFiles/compiler_construction.dir/javaclass.c.obj.requires:
+
+.PHONY : CMakeFiles/compiler_construction.dir/javaclass.c.obj.requires
+
+CMakeFiles/compiler_construction.dir/javaclass.c.obj.provides: CMakeFiles/compiler_construction.dir/javaclass.c.obj.requires
+	$(MAKE) -f CMakeFiles\compiler_construction.dir\build.make CMakeFiles/compiler_construction.dir/javaclass.c.obj.provides.build
+.PHONY : CMakeFiles/compiler_construction.dir/javaclass.c.obj.provides
+
+CMakeFiles/compiler_construction.dir/javaclass.c.obj.provides.build: CMakeFiles/compiler_construction.dir/javaclass.c.obj
+
+
+CMakeFiles/compiler_construction.dir/bytecode.c.obj: CMakeFiles/compiler_construction.dir/flags.make
+CMakeFiles/compiler_construction.dir/bytecode.c.obj: ../bytecode.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\compiler_construction\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/compiler_construction.dir/bytecode.c.obj"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\compiler_construction.dir\bytecode.c.obj   -c D:\compiler_construction\bytecode.c
+
+CMakeFiles/compiler_construction.dir/bytecode.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/compiler_construction.dir/bytecode.c.i"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\compiler_construction\bytecode.c > CMakeFiles\compiler_construction.dir\bytecode.c.i
+
+CMakeFiles/compiler_construction.dir/bytecode.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/compiler_construction.dir/bytecode.c.s"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\compiler_construction\bytecode.c -o CMakeFiles\compiler_construction.dir\bytecode.c.s
+
+CMakeFiles/compiler_construction.dir/bytecode.c.obj.requires:
+
+.PHONY : CMakeFiles/compiler_construction.dir/bytecode.c.obj.requires
+
+CMakeFiles/compiler_construction.dir/bytecode.c.obj.provides: CMakeFiles/compiler_construction.dir/bytecode.c.obj.requires
+	$(MAKE) -f CMakeFiles\compiler_construction.dir\build.make CMakeFiles/compiler_construction.dir/bytecode.c.obj.provides.build
+.PHONY : CMakeFiles/compiler_construction.dir/bytecode.c.obj.provides
+
+CMakeFiles/compiler_construction.dir/bytecode.c.obj.provides.build: CMakeFiles/compiler_construction.dir/bytecode.c.obj
+
+
 # Object files for target compiler_construction
 compiler_construction_OBJECTS = \
 "CMakeFiles/compiler_construction.dir/lextest.c.obj" \
 "CMakeFiles/compiler_construction.dir/lexer.c.obj" \
 "CMakeFiles/compiler_construction.dir/symbol.c.obj" \
 "CMakeFiles/compiler_construction.dir/error.c.obj" \
-"CMakeFiles/compiler_construction.dir/init.c.obj"
+"CMakeFiles/compiler_construction.dir/init.c.obj" \
+"CMakeFiles/compiler_construction.dir/javaclass.c.obj" \
+"CMakeFiles/compiler_construction.dir/bytecode.c.obj"
 
 # External object files for target compiler_construction
 compiler_construction_EXTERNAL_OBJECTS =
@@ -192,11 +242,13 @@ compiler_construction.exe: CMakeFiles/compiler_construction.dir/lexer.c.obj
 compiler_construction.exe: CMakeFiles/compiler_construction.dir/symbol.c.obj
 compiler_construction.exe: CMakeFiles/compiler_construction.dir/error.c.obj
 compiler_construction.exe: CMakeFiles/compiler_construction.dir/init.c.obj
+compiler_construction.exe: CMakeFiles/compiler_construction.dir/javaclass.c.obj
+compiler_construction.exe: CMakeFiles/compiler_construction.dir/bytecode.c.obj
 compiler_construction.exe: CMakeFiles/compiler_construction.dir/build.make
 compiler_construction.exe: CMakeFiles/compiler_construction.dir/linklibs.rsp
 compiler_construction.exe: CMakeFiles/compiler_construction.dir/objects1.rsp
 compiler_construction.exe: CMakeFiles/compiler_construction.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\compiler_construction\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable compiler_construction.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\compiler_construction\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable compiler_construction.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\compiler_construction.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -209,6 +261,8 @@ CMakeFiles/compiler_construction.dir/requires: CMakeFiles/compiler_construction.
 CMakeFiles/compiler_construction.dir/requires: CMakeFiles/compiler_construction.dir/symbol.c.obj.requires
 CMakeFiles/compiler_construction.dir/requires: CMakeFiles/compiler_construction.dir/error.c.obj.requires
 CMakeFiles/compiler_construction.dir/requires: CMakeFiles/compiler_construction.dir/init.c.obj.requires
+CMakeFiles/compiler_construction.dir/requires: CMakeFiles/compiler_construction.dir/javaclass.c.obj.requires
+CMakeFiles/compiler_construction.dir/requires: CMakeFiles/compiler_construction.dir/bytecode.c.obj.requires
 
 .PHONY : CMakeFiles/compiler_construction.dir/requires
 

@@ -8,6 +8,7 @@
 char lexbuf[BSIZE];
 int lineno = 1;
 int tokenval = NONE;
+int temp_tokenval = 3;
 
 int lexan() {
     int t;
@@ -19,19 +20,13 @@ int lexan() {
         } else if (isdigit(t)) {
             ungetc(t, stdin);
             scanf("%d", &tokenval);
-            int p = 0;
-            itoa(tokenval, lexbuf, 10);
-            p = lookup(lexbuf);
-            if(p == 0){
-                if(tokenval < 128){
-                    p = insert(lexbuf, INT8);
-                }else if (tokenval >= 128 && tokenval <= 32768){
-                    p = insert(lexbuf, INT16);
-                }else if(tokenval >= 32768 && tokenval <= 2147483647){
-                    p = insert(lexbuf, INT32);
+            if(tokenval < 128){
+                return INT8;
+            }else if (tokenval >= 128 && tokenval <= 32768){
+                return INT16;
+            }else if(tokenval >= 32768 && tokenval <= 2147483647){
+                return INT32;
             }
-        }
-        return symtable[p].token;
         } else if (isalpha(t) || t == '_') {
             int p, b = 0;
             while (isalnum(t) || t == '_') {
@@ -48,8 +43,11 @@ int lexan() {
             if (p == 0) {
 //                printf("calling insert\n");
                 p = insert(lexbuf, ID);
+                tokenval = temp_tokenval++;
+            }else{
+                tokenval = NONE;
             }
-            tokenval = p;
+            //tokenval = p;
             return symtable[p].token;
         }
         else if (t == EOF)

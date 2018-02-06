@@ -74,6 +74,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/compiler_construction/bytecode.c">
+			<Option target="compiler_construction"/>
+		</Unit>
+		<Unit filename="D:/compiler_construction/bytecode.h">
+			<Option target="compiler_construction"/>
+		</Unit>
 		<Unit filename="D:/compiler_construction/error.c">
 			<Option target="compiler_construction"/>
 		</Unit>
@@ -89,6 +95,12 @@
 		<Unit filename="D:/compiler_construction/init.h">
 			<Option target="compiler_construction"/>
 		</Unit>
+		<Unit filename="D:/compiler_construction/javaclass.c">
+			<Option target="compiler_construction"/>
+		</Unit>
+		<Unit filename="D:/compiler_construction/javaclass.h">
+			<Option target="compiler_construction"/>
+		</Unit>
 		<Unit filename="D:/compiler_construction/lexer.c">
 			<Option target="compiler_construction"/>
 		</Unit>
@@ -96,6 +108,9 @@
 			<Option target="compiler_construction"/>
 		</Unit>
 		<Unit filename="D:/compiler_construction/lextest.c">
+			<Option target="compiler_construction"/>
+		</Unit>
+		<Unit filename="D:/compiler_construction/lextest.h">
 			<Option target="compiler_construction"/>
 		</Unit>
 		<Unit filename="D:/compiler_construction/symbol.c">

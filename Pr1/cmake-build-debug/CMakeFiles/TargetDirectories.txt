@@ -1,3 +1,0 @@
-D:/Pr1/cmake-build-debug/CMakeFiles/Pr1.dir
-D:/Pr1/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Pr1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

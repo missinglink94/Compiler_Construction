@@ -122,6 +122,33 @@ compiler_construction/fast:
 	$(MAKE) -f CMakeFiles\compiler_construction.dir\build.make CMakeFiles/compiler_construction.dir/build
 .PHONY : compiler_construction/fast
 
+bytecode.obj: bytecode.c.obj
+
+.PHONY : bytecode.obj
+
+# target to build an object file
+bytecode.c.obj:
+	$(MAKE) -f CMakeFiles\compiler_construction.dir\build.make CMakeFiles/compiler_construction.dir/bytecode.c.obj
+.PHONY : bytecode.c.obj
+
+bytecode.i: bytecode.c.i
+
+.PHONY : bytecode.i
+
+# target to preprocess a source file
+bytecode.c.i:
+	$(MAKE) -f CMakeFiles\compiler_construction.dir\build.make CMakeFiles/compiler_construction.dir/bytecode.c.i
+.PHONY : bytecode.c.i
+
+bytecode.s: bytecode.c.s
+
+.PHONY : bytecode.s
+
+# target to generate assembly for a file
+bytecode.c.s:
+	$(MAKE) -f CMakeFiles\compiler_construction.dir\build.make CMakeFiles/compiler_construction.dir/bytecode.c.s
+.PHONY : bytecode.c.s
+
 error.obj: error.c.obj
 
 .PHONY : error.obj
@@ -175,6 +202,33 @@ init.s: init.c.s
 init.c.s:
 	$(MAKE) -f CMakeFiles\compiler_construction.dir\build.make CMakeFiles/compiler_construction.dir/init.c.s
 .PHONY : init.c.s
+
+javaclass.obj: javaclass.c.obj
+
+.PHONY : javaclass.obj
+
+# target to build an object file
+javaclass.c.obj:
+	$(MAKE) -f CMakeFiles\compiler_construction.dir\build.make CMakeFiles/compiler_construction.dir/javaclass.c.obj
+.PHONY : javaclass.c.obj
+
+javaclass.i: javaclass.c.i
+
+.PHONY : javaclass.i
+
+# target to preprocess a source file
+javaclass.c.i:
+	$(MAKE) -f CMakeFiles\compiler_construction.dir\build.make CMakeFiles/compiler_construction.dir/javaclass.c.i
+.PHONY : javaclass.c.i
+
+javaclass.s: javaclass.c.s
+
+.PHONY : javaclass.s
+
+# target to generate assembly for a file
+javaclass.c.s:
+	$(MAKE) -f CMakeFiles\compiler_construction.dir\build.make CMakeFiles/compiler_construction.dir/javaclass.c.s
+.PHONY : javaclass.c.s
 
 lexer.obj: lexer.c.obj
 
@@ -266,12 +320,18 @@ help:
 	@echo ... edit_cache
 	@echo ... compiler_construction
 	@echo ... rebuild_cache
+	@echo ... bytecode.obj
+	@echo ... bytecode.i
+	@echo ... bytecode.s
 	@echo ... error.obj
 	@echo ... error.i
 	@echo ... error.s
 	@echo ... init.obj
 	@echo ... init.i
 	@echo ... init.s
+	@echo ... javaclass.obj
+	@echo ... javaclass.i
+	@echo ... javaclass.s
 	@echo ... lexer.obj
 	@echo ... lexer.i
 	@echo ... lexer.s

@@ -3,7 +3,6 @@
 //
 #include <stdio.h>
 #include <string.h>
-#include <error.h>
 #include "global.h"
 #include "error.h"
 

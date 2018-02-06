@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/compiler_construction.dir/symbol.c.obj"
   "CMakeFiles/compiler_construction.dir/error.c.obj"
   "CMakeFiles/compiler_construction.dir/init.c.obj"
+  "CMakeFiles/compiler_construction.dir/javaclass.c.obj"
+  "CMakeFiles/compiler_construction.dir/bytecode.c.obj"
   "compiler_construction.pdb"
   "compiler_construction.exe"
   "compiler_construction.exe.manifest"
