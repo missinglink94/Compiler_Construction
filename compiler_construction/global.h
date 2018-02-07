@@ -23,7 +23,6 @@
 #define INT8   302
 #define INT16  303
 #define INT32  304
-int temp_tokenval;
 int tokenval;
 int lineno;
 struct entry {

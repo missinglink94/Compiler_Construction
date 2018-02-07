@@ -129,7 +129,7 @@
 #define fmul            (0x6a)  
 #define dmul            (0x6b)  
 #define idiv            (0x6c)  
-#define lediv (0x6d)
+#define ldiv            (0x6d)  
 #define fdiv            (0x6e)  
 #define ddiv            (0x6f)  
 #define irem            (0x70)  

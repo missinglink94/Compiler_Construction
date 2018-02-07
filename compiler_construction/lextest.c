@@ -25,14 +25,12 @@
 //
 // Created by Subha on 2/5/2018.
 //
-
-#include "compile.h"
+#include "javaclass.h"
 #include "bytecode.h"
 #include "global.h"
 #include "init.h"
 #include "symbol.h"
 #include "lexer.h"
-#include "javaclass.h"
 #include "error.h"
 
 int lookahead;
@@ -72,15 +70,16 @@ void factor() {
         emit2(ldc, constant_pool_add_Integer(&cf, tokenval));
         match(INT32);
     } else if (lookahead == ID) {
-        emit2(iload, symtable[lookup(ID)].lexptr); //TODO
+        emit2(iload, tokenval); //TODO
         match(ID);
     } else if (lookahead == ARG) {
         match(ARG);
         match('[');
+        int tok = tokenval;
         match(INT8);
         match(']');
         emit(aload_1);
-        emit2(bipush, tokenval);
+        emit2(bipush, tok);
         emit(iaload);
     } else {
         error("");
@@ -147,7 +146,7 @@ void stmt() {
         stmt();
         backpatch(loc, pc - loc);
         match(ELSE);
-        emit3(goto_, loc - pc); //TODO: Modification required
+        //emit3(goto_, loc - pc); //TODO: Modification required
         stmt();
     } else if (lookahead == WHILE) {
         match(WHILE);
@@ -165,7 +164,7 @@ void stmt() {
         match(RETURN);
         expr();
         emit(istore_2);
-        emit3(goto_, pc); //TODO: Need Modification
+        //emit3(goto_, PAD); //TODO: Need Modification
         match(';');
     } else {
         error("");
@@ -182,9 +181,9 @@ void opts_stmts() {
 }
 
 int main() {
-    FILE * fp;
-    fclose(stdin);
-    fp = fopen("D:/compiler_construction/mytest", "r");
+    //FILE * fp;
+    //fclose(stdin);
+    //fp = fopen("D:/compiler_construction/mytest", "r");
     int token;
     init();
     token = lexan();
@@ -270,7 +269,11 @@ int main() {
 
     /*Start of the parser*/
     stmt();
-
+    //emit2(bipush, 20);
+    //emit2(iload, 3);
+    //emit2(istore, 2);
+    //emit(iload_3);
+    //emit(istore_2);
     index2 = constant_pool_add_Fieldref(&cf, "java/lang/System", "out", "Ljava/io/PrintStream;");
 /*036*/    emit3(getstatic, index2);    // get static field System.out of type PrintStream
 /*039*/    emit(iload_2);            // push parameter for println()
@@ -286,7 +289,7 @@ int main() {
 
     // save class file to "Code.class"
     save_classFile(&cf);
-    fclose(fp);
+    //fclose(fp);
     return 0;
 
 }

@@ -1,1 +1,9 @@
-{ y = 2; m = 1000*n+arg[0]; }
+{
+if ( arg[0] )
+if ( arg[1] )
+return 1;
+else
+return 2;
+else
+return 3;
+}

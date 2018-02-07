@@ -8,7 +8,6 @@
 char lexbuf[BSIZE];
 int lineno = 1;
 int tokenval = NONE;
-int temp_tokenval = 3;
 
 int lexan() {
     int t;
@@ -43,9 +42,11 @@ int lexan() {
             if (p == 0) {
 //                printf("calling insert\n");
                 p = insert(lexbuf, ID);
-                tokenval = temp_tokenval++;
-            }else{
+            }
+            if(symtable[p].token == IF || symtable[p].token == ELSE || symtable[p].token == WHILE || symtable[p].token == RETURN || symtable[p].token == ARG ){
                 tokenval = NONE;
+            }else{
+                tokenval = (p-5)+2;
             }
             //tokenval = p;
             return symtable[p].token;

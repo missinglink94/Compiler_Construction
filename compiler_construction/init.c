@@ -11,7 +11,8 @@ struct entry keywords[] =
                 {"if", IF},
                 {"return", RETURN},
                 {"while", WHILE},
-                {"arg", ARG}
+                {"arg", ARG},
+		{0,0}
         };
 
 int init() {
