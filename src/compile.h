@@ -12,9 +12,9 @@
 
 #define ERROR_STRING "Invalid Character"
 
-void setEndLocation(int loc);
-int getEndLocation(int index);
-int nextToken();
+void setendlocation(int loc);
+int getendlocation(int index);
+int nexttoken();
 
 void match(int token);
 

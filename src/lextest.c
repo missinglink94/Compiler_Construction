@@ -5,7 +5,7 @@
 #include "lextest.h"
 #include "global.h"
 
-char *getToken(int token) {
+char *gettoken(int token) {
     switch (token) {
         case IF:
             return "IF";
@@ -40,7 +40,7 @@ int main() {
         if (token <= 255) {
             printf("<%c, %d>", token, tokenval);
         } else {
-            printf("<%s, %d>", getToken(token), tokenval);
+            printf("<%s, %d>", gettoken(token), tokenval);
         }
     }
     return 0;

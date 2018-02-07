@@ -8,6 +8,6 @@
 #include "init.h"
 #include "lexer.h"
 
-char *getToken(int token);
+char *gettoken(int token);
 
 #endif //COMPILER_CONSTRUCTION_LEXTEST_H

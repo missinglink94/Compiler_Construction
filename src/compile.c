@@ -13,15 +13,15 @@ struct ClassFile cf;
 int index1, index2, index3;
 int label1, label2;
 
-void setEndLocation(int loc) {
+void setendlocation(int loc) {
     end_locations[end_loc_index++] = loc;
 }
 
-int getEndLocation(int index) {
+int getendlocation(int index) {
     return end_locations[index];
 }
 
-int nextToken() {
+int nexttoken() {
     int token;
     token = lexan();
     if (token == DONE) {
@@ -32,7 +32,7 @@ int nextToken() {
 
 void match(int token) {
     if (lookahead == token) {
-        lookahead = nextToken();
+        lookahead = nexttoken();
     } else {
         error(ERROR_STRING);
     }
@@ -151,7 +151,7 @@ void stmt() {
         match(RETURN);
         expr();
         emit(istore_2);
-        setEndLocation(pc);
+        setendlocation(pc);
         emit3(goto_, PAD);
         match(';');
     } else {
@@ -268,8 +268,8 @@ int main() {
 
     /*Backpatching for return*/
     for (int i = 0; i < end_loc_index; i++) {
-        int endLocation = getEndLocation(i);
-        backpatch(endLocation, pc - endLocation);
+        int endlocation = getendlocation(i);
+        backpatch(endlocation, pc - endlocation);
     }
 
     /*End part of byte emitter*/
