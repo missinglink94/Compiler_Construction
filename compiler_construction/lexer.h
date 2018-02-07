@@ -4,5 +4,9 @@
 
 #ifndef COMPILER_CONSTRUCTION_LEXER_H
 #define COMPILER_CONSTRUCTION_LEXER_H
+
+#include "symbol.h"
+
 int lexan();
+
 #endif //COMPILER_CONSTRUCTION_LEXER_H

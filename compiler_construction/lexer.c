@@ -1,9 +1,8 @@
 //
 // Created by Subha on 2/2/2018.
 //
+#include "lexer.h"
 #include "global.h"
-#include "error.h"
-#include "symbol.h"
 
 char lexbuf[BSIZE];
 int lineno = 1;
@@ -19,11 +18,11 @@ int lexan() {
         } else if (isdigit(t)) {
             ungetc(t, stdin);
             scanf("%d", &tokenval);
-            if(tokenval < 128){
+            if (tokenval < 128) {
                 return INT8;
-            }else if (tokenval >= 128 && tokenval <= 32768){
+            } else if (tokenval >= 128 && tokenval <= 32768) {
                 return INT16;
-            }else if(tokenval >= 32768 && tokenval <= 2147483647){
+            } else if (tokenval >= 32768 && tokenval <= 2147483647) {
                 return INT32;
             }
         } else if (isalpha(t) || t == '_') {
@@ -40,18 +39,16 @@ int lexan() {
                 ungetc(t, stdin);
             p = lookup(lexbuf);
             if (p == 0) {
-//                printf("calling insert\n");
                 p = insert(lexbuf, ID);
             }
-            if(symtable[p].token == IF || symtable[p].token == ELSE || symtable[p].token == WHILE || symtable[p].token == RETURN || symtable[p].token == ARG ){
+            if (symtable[p].token == IF || symtable[p].token == ELSE || symtable[p].token == WHILE ||
+                symtable[p].token == RETURN || symtable[p].token == ARG) {
                 tokenval = NONE;
-            }else{
-                tokenval = (p-5)+2;
+            } else {
+                tokenval = (p - 5) + 2;
             }
-            //tokenval = p;
             return symtable[p].token;
-        }
-        else if (t == EOF)
+        } else if (t == EOF)
             return DONE;
         else {
             tokenval = NONE;

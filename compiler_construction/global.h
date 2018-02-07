@@ -8,26 +8,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include "error.h"
 
-#define BSIZE 128
-#define NONE  -1
-#define EOS   '\0'
+
+#define STRMAX 999
+#define SYMMAX 100
+
+#define BSIZE       128
+#define NONE        -1
+#define EOS         '\0'
 #define IF          265
 #define ELSE        266
 #define WHILE       267
 #define RETURN      268
 #define ARG         269
-/* Check if anything else required */
-#define DONE   300
-#define ID     301
-#define INT8   302
-#define INT16  303
-#define INT32  304
+#define DONE        300
+#define ID          301
+#define INT8        302
+#define INT16       303
+#define INT32       304
 int tokenval;
 int lineno;
 struct entry {
     char *lexptr;
     int token;
 };
-struct entry symtable[];
+struct entry symtable[SYMMAX];
 #endif //COMPILER_CONSTRUCTION_GLOBAL_H

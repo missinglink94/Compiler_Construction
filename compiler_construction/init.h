@@ -4,5 +4,9 @@
 
 #ifndef COMPILER_CONSTRUCTION_INIT_H
 #define COMPILER_CONSTRUCTION_INIT_H
+
+#include "symbol.h"
+
 int init();
+
 #endif //COMPILER_CONSTRUCTION_INIT_H

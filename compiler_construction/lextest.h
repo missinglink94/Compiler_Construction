@@ -1,15 +1,13 @@
 //
-// Created by Subha on 2/5/2018.
+// Created by Subhadeep on 2/7/18.
 //
 
 #ifndef COMPILER_CONSTRUCTION_LEXTEST_H
 #define COMPILER_CONSTRUCTION_LEXTEST_H
-int nexttoken();
-void error();
-void match(int token);
-void factor();
-void term();
-void expr();
-void stmt();
-void opts_stmts();
+
+#include "init.h"
+#include "lexer.h"
+
+char *getToken(int token);
+
 #endif //COMPILER_CONSTRUCTION_LEXTEST_H

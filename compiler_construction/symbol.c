@@ -4,25 +4,22 @@
 #include <stdio.h>
 #include <string.h>
 #include "global.h"
-#include "error.h"
 
 
-#define STRMAX 999
-#define SYMMAX 100
 char lexemes[STRMAX];
 int lastchar = -1;
-struct entry symtable[SYMMAX];
+
 int lastentry = 0;
-int lookup(char s[])
-{
+
+int lookup(char s[]) {
     int p;
     for (p = lastentry; p > 0; p = p - 1)
         if (strcmp(symtable[p].lexptr, s) == 0)
             return p;
     return 0;
 }
-int insert(char s[], int tok)
-{
+
+int insert(char s[], int tok) {
     int len;
     len = strlen(s);
     if (lastentry + 1 >= SYMMAX)

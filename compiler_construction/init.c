@@ -2,17 +2,18 @@
 // Created by Subha on 2/2/2018.
 //
 
+#include "init.h"
 #include "global.h"
-#include "symbol.h"
+
 
 struct entry keywords[] =
         {
-                {"else", ELSE},
-                {"if", IF},
+                {"else",   ELSE},
+                {"if",     IF},
                 {"return", RETURN},
-                {"while", WHILE},
-                {"arg", ARG},
-		{0,0}
+                {"while",  WHILE},
+                {"arg",    ARG},
+                {0, 0}
         };
 
 int init() {
