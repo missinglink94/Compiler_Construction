@@ -35,13 +35,17 @@ char *gettoken(int token) {
 int main() {
     int token;
     init();
-    while (token != DONE) {
+    while (1) {
         token = lexan();
-        if (token <= 255) {
-            printf("<%c, %d>", token, tokenval);
-        } else {
-            printf("<%s, %d>", gettoken(token), tokenval);
-        }
+        if(token == DONE){
+	    break;
+	} else { 
+	    if (token <= 255) {
+            	printf("<%c, %d>", token, tokenval);
+            } else {
+            	printf("<%s, %d>", gettoken(token), tokenval);
+            }
+        }	
     }
     return 0;
 }

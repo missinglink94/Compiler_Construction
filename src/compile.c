@@ -267,7 +267,8 @@ int main() {
     stmt();
 
     /*Backpatching for return*/
-    for (int i = 0; i < end_loc_index; i++) {
+    int i;
+    for (i = 0; i < end_loc_index; i++) {
         int endlocation = getendlocation(i);
         backpatch(endlocation, pc - endlocation);
     }
